@@ -1,0 +1,5 @@
+@import '../../styles/colors';
+
+.tasksList {
+    @apply flex gap-3 flex-col;
+}

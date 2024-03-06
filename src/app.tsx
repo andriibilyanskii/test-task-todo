@@ -5,15 +5,13 @@ import './app.scss'
 // import { SELECTORS } from './store/selectors'
 // import { increment, incrementByAmount } from './store/data-reducer'
 
-import { Button } from './components'
+import { Todo } from './pages'
 
 function App(): React.ReactElement {
   // const data = useAppSelector(SELECTORS.getDataStore)
   // const dispatch = useAppDispatch()
 
-  return <div className='App'>
-    <Button>Text</Button>
-  </div>
+  return <Todo></Todo>
 }
 
 export default App

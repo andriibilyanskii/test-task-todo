@@ -1,0 +1,9 @@
+@import '../../styles/colors';
+
+.filters {
+  @apply flex p-4 gap-3;
+
+  .counter {
+    @apply text-red-700 pl-2;
+  }
+}
