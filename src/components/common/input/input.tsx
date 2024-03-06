@@ -10,6 +10,7 @@ interface IProps {
   className?: string
   padding?: string
   style?: CSSProperties
+  maxLength?: number
 }
 
 const Input: React.FC<IProps> = (props) => {

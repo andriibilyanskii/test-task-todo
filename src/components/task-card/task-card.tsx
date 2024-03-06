@@ -21,12 +21,12 @@ const TaskCard: React.FC<IProps> = ({ task }) => {
   const dispatch = useAppDispatch()
 
   return (
-    <div
+    <li
       className={classNames({
         'taskCard': true,
         'taskCard_completed': task.status,
       })}
-      onClick={():void => {
+      onClick={(): void => {
         dispatch(changeStatus(task.id))
       }}
     >
@@ -44,9 +44,9 @@ const TaskCard: React.FC<IProps> = ({ task }) => {
 
       <Button
         className={'button'}
-        isTransparent={true}
+        buttonType={'transparent'}
         type={'submit'}
-        onClick={():void => {
+        onClick={(): void => {
           dispatch(deleteTask(task.id))
         }}
       >
@@ -55,7 +55,7 @@ const TaskCard: React.FC<IProps> = ({ task }) => {
           color={'red'}
         />
       </Button>
-    </div>
+    </li>
   )
 }
 

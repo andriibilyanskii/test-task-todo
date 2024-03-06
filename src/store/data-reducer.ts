@@ -1,13 +1,15 @@
 // eslint-disable-next-line import/named
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ITask } from '../interfaces'
+import { ITask, TFilteringType } from '../interfaces'
 
 interface InitialStateProps {
   data: Array<ITask>
+  filteringType: TFilteringType
 }
 
 const initialState: InitialStateProps = {
   'data': [],
+  'filteringType': 'all',
 }
 
 export const dataSlice = createSlice({
@@ -27,9 +29,18 @@ export const dataSlice = createSlice({
     'deleteTask': (state, action:PayloadAction<string>) => {
       state.data = state.data.filter((el) => el.id !== action.payload)
     },
+    'setFilteringType':
+        (state, action:PayloadAction<InitialStateProps['filteringType']>) => {
+          state.filteringType = action.payload
+        },
   },
 })
 
-export const { addTask, changeStatus, deleteTask } = dataSlice.actions
+export const {
+  addTask,
+  changeStatus,
+  deleteTask,
+  setFilteringType,
+} = dataSlice.actions
 
 export default dataSlice.reducer
