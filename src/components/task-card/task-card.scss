@@ -1,7 +1,7 @@
 @import '../../styles/colors';
 
 .taskCard {
-  @apply grid p-4 gap-3 w-full rounded-md transition-colors;
+  @apply grid p-4 gap-3 w-full rounded-md transition-colors border-2 border-gray-200;
   grid-template-areas: 'task status' 'date button';
   grid-template-columns: 1fr auto;
 
