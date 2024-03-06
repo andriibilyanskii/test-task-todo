@@ -1,7 +1,6 @@
 import React from 'react'
 
-import { Button, Icon, Text } from '../../components'
-import { CONSTANTS } from '../../constants'
+import { AddItemForm, Text } from '../../components'
 
 import './todo.scss'
 
@@ -12,19 +11,9 @@ const Todo: React.FC = () => {
         <Text type={'header'}>ToDo List</Text>
       </header>
 
-      <div>
-        <Button isRound={true}>
-          <Icon src={CONSTANTS.ICONS.plus} />
-        </Button>
-        <Button isRound={false}>asdfas</Button>
-      </div>
+      <AddItemForm/>
     </main>
   )
-}
-
-Todo.defaultProps = {
-  'className': '',
-  'padding': '0rem',
 }
 
 export default Todo

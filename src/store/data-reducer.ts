@@ -1,7 +1,9 @@
-import { createSlice } from '@reduxjs/toolkit'
+// eslint-disable-next-line import/named
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { ITask } from '../interfaces'
 
 interface InitialStateProps {
-  data: Array<any>
+  data: Array<ITask>
 }
 
 const initialState: InitialStateProps = {
@@ -12,15 +14,12 @@ export const dataSlice = createSlice({
   'name': 'data',
   initialState,
   'reducers': {
-    'increment': (state) => {
-      state.data = [...state.data, 'a']
-    },
-    'incrementByAmount': (state, action) => {
+    'addTask': (state, action:PayloadAction<ITask>) => {
       state.data = [...state.data, action.payload]
     },
   },
 })
 
-export const { increment, incrementByAmount } = dataSlice.actions
+export const { addTask } = dataSlice.actions
 
 export default dataSlice.reducer
