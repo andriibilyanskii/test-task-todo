@@ -19,7 +19,7 @@ interface IProps {
   | '8rem'
   | '12rem'
   className?: string
-  onClick?: (e: any) => void
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void
   padding?: string
   style?: CSSProperties
 }

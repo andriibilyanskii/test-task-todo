@@ -16,6 +16,15 @@ const Todo: React.FC = () => {
       <Filters/>
 
       <TasksList/>
+
+      <footer>
+        <Text type={'s'}>
+          Powered by
+          <a href={'https://github.com/andriibilyanskii'}>
+                @Andrii Bilianskyi
+          </a>
+        </Text>
+      </footer>
     </main>
   )
 }

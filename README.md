@@ -11,3 +11,5 @@ Create a component that meets the requirements below.
 - Use a storage (Redux).
 - For styling you can use any lib/framework, but remember UI matters.
 - Please use this linter https://github.com/wemake-services/wemake-frontend-styleguide.
+
+Demo: https://test-task-todo-andrii-bilianskyi.vercel.app

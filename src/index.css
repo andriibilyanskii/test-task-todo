@@ -23,6 +23,7 @@ body {
 		sans-serif;
 	overflow-x: hidden; /* for old browsers */
 	overflow-x: clip;
+	min-height: 100vh;
 }
 
 ::selection {
@@ -37,6 +38,13 @@ a {
 
 * {
 	box-sizing: border-box;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	min-height: 100vh;
 }
 
 input,

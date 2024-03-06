@@ -6,4 +6,8 @@
   .counter {
     @apply text-red-700 pl-2;
   }
+
+  @media screen and (max-width: 400px) {
+    @apply flex-col;
+  }
 }

@@ -5,7 +5,7 @@ import './button.scss'
 
 interface IProps {
   children?: React.ReactNode
-  onClick?: (e: any) => void
+  onClick?: (e: React.MouseEvent<HTMLElement>) => void
   className?: string
   type?: 'button' | 'submit'
   disabled?: boolean

@@ -1,11 +1,17 @@
 @import '../../styles/colors';
 
 .todo {
+	@apply flex flex-col flex-grow;
+
 	header {
 		@apply bg-blue-500 p-2 flex justify-center;
 
 		.text {
 			@apply text-white;
 		}
+	}
+
+	footer {
+		@apply p-2 flex justify-center;
 	}
 }
