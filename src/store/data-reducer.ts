@@ -17,9 +17,19 @@ export const dataSlice = createSlice({
     'addTask': (state, action:PayloadAction<ITask>) => {
       state.data = [...state.data, action.payload]
     },
+    'changeStatus': (state, action:PayloadAction<string>) => {
+      state.data = state.data.map((el) => {
+        if (el.id === action.payload) {
+          return { ...el, 'status': !el.status }
+        } return el
+      })
+    },
+    'deleteTask': (state, action:PayloadAction<string>) => {
+      state.data = state.data.filter((el) => el.id !== action.payload)
+    },
   },
 })
 
-export const { addTask } = dataSlice.actions
+export const { addTask, changeStatus, deleteTask } = dataSlice.actions
 
 export default dataSlice.reducer

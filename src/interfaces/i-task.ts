@@ -1,7 +1,8 @@
 interface ITask {
+  id: string
   text: string
   date: string
-  status: 'in-progress'|'completed'
+  status: boolean
 }
 
 export type { ITask }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { AddItemForm, Text } from '../../components'
+import { AddItemForm, TasksList, Text } from '../../components'
 
 import './todo.scss'
 
@@ -12,6 +12,8 @@ const Todo: React.FC = () => {
       </header>
 
       <AddItemForm/>
+
+      <TasksList/>
     </main>
   )
 }

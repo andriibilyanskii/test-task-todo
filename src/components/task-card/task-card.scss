@@ -1,0 +1,31 @@
+@import '../../styles/colors';
+
+.taskCard {
+  @apply grid p-4 gap-3 w-full rounded-md transition-colors;
+  grid-template-areas: 'task status' 'date button';
+  grid-template-columns: 1fr auto;
+
+  .task {
+    grid-area: task;
+  }
+
+  .date {
+    grid-area: date;
+  }
+
+  .status {
+    grid-area: status;
+  }
+
+  .button {
+    grid-area: button;
+  }
+
+  &_completed {
+    @apply bg-gray-200;
+
+    .task {
+      @apply line-through;
+    }
+  }
+}

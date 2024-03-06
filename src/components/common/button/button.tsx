@@ -11,16 +11,18 @@ interface IProps {
   disabled?: boolean
   style?: CSSProperties
   isRound?: boolean
+  isTransparent?: boolean
 }
 
 const Button: React.FC<IProps> = (props) => {
-  const { children, className, isRound, ...rest } = props
+  const { children, className, isRound, isTransparent, ...rest } = props
 
   return (
     <button
       className={classNames({
 			  'button': true,
 			  'button_round': isRound,
+        'button_transparent': isTransparent,
 			  [className || '']: Boolean(className),
       })}
       {...rest}

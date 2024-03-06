@@ -1,4 +1,7 @@
 import React, { useState } from 'react'
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import { v4 as uuidv4 } from 'uuid'
 
 import { Button, Icon, Input } from '../index'
 import { CONSTANTS } from '../../constants'
@@ -22,9 +25,10 @@ const AddItemForm: React.FC = () => {
 
         dispatch(
           addTask({
+            'id': uuidv4(),
             'text': task,
             'date': new Date().toISOString(),
-            'status': 'in-progress',
+            'status': false,
           }),
         )
         setTask('')
