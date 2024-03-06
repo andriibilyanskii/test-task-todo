@@ -1,24 +1,21 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from './index'
+import { createSlice } from '@reduxjs/toolkit'
 
-// Define a type for the slice state
 interface InitialStateProps {
   data: Array<any>
 }
 
-// Define the initial state using that type
 const initialState: InitialStateProps = {
-  data: [],
+  'data': [],
 }
 
 export const dataSlice = createSlice({
-  name: 'data',
+  'name': 'data',
   initialState,
-  reducers: {
-    increment: (state) => {
+  'reducers': {
+    'increment': (state) => {
       state.data = [...state.data, 'a']
     },
-    incrementByAmount: (state, action: PayloadAction<string>) => {
+    'incrementByAmount': (state, action) => {
       state.data = [...state.data, action.payload]
     },
   },

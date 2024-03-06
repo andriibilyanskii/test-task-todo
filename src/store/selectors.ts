@@ -1,3 +1,3 @@
 export const SELECTORS = {
-  getDataStore: (state: any) => state.dataReducer,
+  'getDataStore': (state: any): any => state.dataReducer,
 }

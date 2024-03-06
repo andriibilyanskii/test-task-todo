@@ -1,15 +1,13 @@
 import React from 'react'
 import logo from './logo.svg'
-import './App.scss'
+import './app.scss'
 import { useAppDispatch, useAppSelector } from './store/redux-hooks'
 import { SELECTORS } from './store/selectors'
-import { increment, incrementByAmount } from './store/dataReducer'
+import { increment, incrementByAmount } from './store/data-reducer'
 
-function App() {
+function App(): React.ReactElement {
   const data = useAppSelector(SELECTORS.getDataStore)
   const dispatch = useAppDispatch()
-
-  console.log(data)
 
   return (
     <div className='App'>
@@ -26,19 +24,19 @@ function App() {
         >
 					Learn React
         </a>
-              <button
-                className={'underline'}
-                onClick={() => {
-                  dispatch(increment())
-                }}
-              >
-                {JSON.stringify(data)}
-              </button>
+        <button
+          className={'underline'}
+          onClick={(): void => {
+					  dispatch(increment())
+          }}
+        >
+          {JSON.stringify(data)}
+        </button>
 
         <button
           className={'underline'}
-          onClick={() => {
-            dispatch(incrementByAmount('text'))
+          onClick={(): void => {
+					  dispatch(incrementByAmount('text'))
           }}
         >
           {JSON.stringify(data)}
