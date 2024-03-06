@@ -19,8 +19,8 @@ const Todo: React.FC = () => {
 
       <footer>
         <Text type={'s'}>
-          Powered by
-          <a href={'https://github.com/andriibilyanskii'}>
+          Powered by {' '}
+          <a href={'https://github.com/andriibilyanskii'} target={'_blank'}>
                 @Andrii Bilianskyi
           </a>
         </Text>
