@@ -1,0 +1,11 @@
+@import '../../styles/colors';
+
+.todo {
+	header {
+		@apply bg-blue-500 p-2 flex justify-center text-white;
+
+		.text {
+			@apply text-white;
+		}
+	}
+}

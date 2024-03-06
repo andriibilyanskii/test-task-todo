@@ -26,73 +26,19 @@ $bold: 700;
 	line-height: 2.5rem;
 }
 
-@mixin title-h1 {
-	font-weight: $semibold;
-	font-size: 1.5rem;
-	line-height: 2rem;
-}
-
-@mixin title-h2 {
-	font-weight: $semibold;
-	font-size: 1.375rem;
-	line-height: 1.875rem;
-}
-
-@mixin title-h3 {
-	font-weight: $semibold;
-	font-size: 1.25rem;
-	line-height: 1.75rem;
-}
-
-@mixin title-h4 {
-	font-weight: $semibold;
-	font-size: 1.125rem;
-	line-height: 1.5rem;
-}
-
-@mixin text {
+@mixin p {
 	font-size: 1rem;
 	line-height: 1.5rem;
 	font-weight: $regular;
 	font-family: $primary-font;
-
-	&_bold {
-		font-weight: $bold;
-	}
-
-	&_semibold {
-		font-weight: $semibold;
-	}
-
-	&_medium {
-		font-weight: $medium;
-	}
-
-	&_regular {
-		font-weight: $regular;
-	}
+	font-weight: $regular;
 }
 
-@mixin subtext {
+@mixin s {
 	font-size: 0.75rem;
 	line-height: 1rem;
 	display: block;
 	font-weight: $regular;
 	font-family: $primary-font;
-
-	&_bold {
-		font-weight: $bold;
-	}
-
-	&_semibold {
-		font-weight: $semibold;
-	}
-
-	&_medium {
-		font-weight: $medium;
-	}
-
-	&_regular {
-		font-weight: $regular;
-	}
+	font-weight: $regular;
 }
